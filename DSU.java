@@ -1,6 +1,6 @@
 //union find by rank 
 
-public class DSU{
+static class DSU{
 static final int MaxN=(int)1e6;
 static int id[]=new int [MaxN];
 static int rank[]=new int [MaxN];
@@ -9,6 +9,9 @@ public DSU(){
 
 	
 }
+static boolean connected(int i,int j){
+return root(i)==root(j);
+}	
 static int root(int i){
 	while(i!=id[i]){
 		i=id[i];
